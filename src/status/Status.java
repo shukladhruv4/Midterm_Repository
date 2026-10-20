@@ -5,6 +5,7 @@
  */
 package status;
 
+/*Main*/
 import java.util.Scanner;
 
 /** This class takes String input from user 
@@ -26,8 +27,12 @@ public class Status {
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
     String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+    StatusUser t = new StatusUser();
+        
+        System.out.println("Printing all available User Statuses:");
+        for (NewEnum status : NewEnum.values()) {
+            t.statusDetail(status);
+        }
     }
     
 }
